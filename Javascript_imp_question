@@ -1,0 +1,256 @@
+Javascript Question
+// 1.
+// function fruit() {
+//     // name = 'Banana';
+//     // price = 30;
+//     console.log(name);
+//     console.log(price);
+
+//     let name = 'fruit';
+//     let price = 20;
+// }
+// fruit();
+
+// 2.
+// for(var i = 0; i < 3; i++) {
+//     setTimeout(() => console.log(i), 1)
+// }
+
+// for(let i = 0; i < 3; i++) {
+//     setTimeout(() => console.log(i), 1)
+// }
+
+// 3.
+// let data = 'Size';
+// let bird = {
+//     Size: 'Small'
+// }
+// console.log(bird[data]);
+// console.log(bird['data']);
+// console.log(bird.Size);
+// console.log(bird.data);
+
+// 4.
+// let c = {Name : 'Peter'};
+// let d;
+
+// d=c;
+// c.Name = 'Amit';
+// console.log(d.Name);
+
+// 5.
+// var x = 10;
+// var x;
+// console.log(x);
+
+// 6.
+// var x;
+// let x = 10;
+// console.log(x);
+
+// 7.
+// let a = {}
+// let b = new Number({});
+// console.log(a == b);
+// console.log(a === b);
+
+// 8.
+// function fun(...args) {
+//     console.log(typeof args);
+// }
+// fun(21)
+
+// 9.
+// function getAge() {
+//     'use Strict'
+//     age = 21;
+//     console.log(age);
+// }
+// getAge()
+
+// 10.
+// sessionStorage.setItem('cool_secret', 123)
+
+// 11.
+// let obj = {1 : 'a', 2 : 'b', 3 : 'c', 4 : 'd'};
+// console.log(obj.hasOwnProperty('1'));
+// console.log(obj.hasOwnProperty(1));
+// console.log(obj.hasOwnProperty([1]));
+
+// 12.
+//////   Create Bubble form it is inside from outside.
+
+// {/* <div onclick="console.log('First Div')">
+//         <div onclick="console.log('Second Div')">
+//             <button onclick="console.log('amit')">
+//                 Click!
+//             </button>
+//         </div>
+//     </div> */}  
+
+// 13.
+// const person = {name : 'Amit'};
+// function sayHi(age) {
+//     return `${this.name} is ${age}`
+// }
+// console.log(sayHi.call(person, 21));
+// console.log(sayHi.bind(person, 21)());
+
+/// difference between call() and bind() method
+// call -:  It can call one times
+// bind -:  It can call two times{(1 - Execute a function description), (2 - Execute a fun call)
+
+// 14.
+// function sayHis() {
+//     return (() => 0)();
+// }
+// console.log(typeof sayHis());
+
+// 15.
+// console.log(typeof typeof 0);
+
+// 16.
+// const numbers = [1,2,3];
+// numbers[3] = numbers;
+// console.log(numbers);
+
+// 17.
+//////   Everything in Javascript is either a...
+// A. Primitive or Object                   ////  This opttion is correct
+// B. Function or Object
+// C. trick question! only Objects
+// D. Number or Object 
+
+// 18.
+// console.log(!!null);
+// console.log(!!'');
+// console.log(!!1);
+
+// 19.
+// console.log([...'Amit']);
+//  Destructring : It break our array, object & string into a minimal parts;
+
+// 20.
+// console.log(typeof (3 + 4 + '5'));
+// console.log(typeof 3 + 4 + '5');
+// console.log(typeof (3 + 4 + + '5'));
+
+// 21.
+// let data = [1,2,3].map(num => {
+//     if(typeof num === 'number') return;
+//     return num * 2
+// })
+// console.log(data);
+
+// 22.
+// function getInfo(member) {
+//     member.name = 'Amit';
+// }
+// const person = {name : 'Akansha'}
+// getInfo(person);
+// console.log(person);
+
+// 23.
+// function Car() {
+//     this.make = 'Kia';
+//     return {make : 'Tata'}
+// }
+// const myCar = new Car();
+// console.log(myCar.make);
+
+// 24.
+// (() => {
+//     let x = (y = 20)
+// })();
+// console.log(typeof x);
+
+// 25.
+// (() => {
+//     let x = y = 20
+// })();
+// console.log(typeof y);
+
+// 26.
+// (() => {
+//     let x = y = 20
+// })();
+// (() => {
+//     let y = x = 10
+// })();
+// console.log(y);
+
+// 27.
+// (() => {
+//     let x = y = 10
+// });
+// (() => {
+//     let y = x = 20
+// })
+// console.log(x);
+
+// 28.
+// let x = 100;
+// (() => {
+//     var x = 20;
+// })()
+// console.log(x);
+
+// 29.
+// (() => {
+//     var x = 20;
+// })()
+// console.log(x);
+
+// 30.
+// (() => {
+//     x = 20;
+// })()
+// console.log(x);
+
+// 31.
+// (() => {
+//     x = 20;
+// });
+// console.log(x);
+
+// 32.
+// console.log(!true - true);
+
+// 33.
+// console.log(true + + '10');
+
+var a = 23; 
+b = 47;
+
+var demoObject = {
+    a : 23
+}
+
+with(demoObject) {
+    alert(b)
+}
+
+var ch = 'D';
+var answer;
+switch(ch) {
+    case 'A' : {
+        answer += '100';
+        break;
+    }
+    case 'A' : {
+        answer += '100';
+        break;
+    }
+    case 'B' : {
+        answer += '100';
+        break;
+    }
+    case 'C' : {
+        answer += '100';
+        break;
+    }
+    default : {
+        answer += '70'
+    }    
+}
+console.log(answer);
